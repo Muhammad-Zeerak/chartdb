@@ -37,7 +37,6 @@ interface SelectBoxProps {
     oneLine?: boolean;
     selectAll?: boolean;
     deselectAll?: boolean;
-    clearText?: string;
 }
 
 export const SelectBox = React.forwardRef<HTMLInputElement, SelectBoxProps>(
@@ -54,7 +53,6 @@ export const SelectBox = React.forwardRef<HTMLInputElement, SelectBoxProps>(
             oneLine,
             selectAll,
             deselectAll,
-            clearText,
         },
         ref
     ) => {
@@ -167,26 +165,9 @@ export const SelectBox = React.forwardRef<HTMLInputElement, SelectBoxProps>(
                             )}
                         </div>
                         <div className="flex items-center self-stretch pl-1 text-muted-foreground/60 hover:text-foreground [&>div]:flex [&>div]:items-center [&>div]:self-stretch">
-                            {value && value.length > 0 && multiple ? (
-                                <div
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        handleClear();
-                                    }}
-                                >
-                                    {clearText ? (
-                                        <span className="text-xs">
-                                            {clearText}
-                                        </span>
-                                    ) : (
-                                        <Cross2Icon className="size-3.5" />
-                                    )}
-                                </div>
-                            ) : (
-                                <div>
-                                    <CaretSortIcon className="size-4" />
-                                </div>
-                            )}
+                            <div>
+                                <CaretSortIcon className="size-4" />
+                            </div>
                         </div>
                     </div>
                 </PopoverTrigger>
