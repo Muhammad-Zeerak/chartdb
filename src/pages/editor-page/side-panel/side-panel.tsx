@@ -1,4 +1,5 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
+import { useReactFlow } from '@xyflow/react';
 import {
     Select,
     SelectContent,
@@ -21,6 +22,7 @@ export const SidePanel: React.FC<SidePanelProps> = () => {
     const { t } = useTranslation();
     const { schemas, filterSchemas, filteredSchemas } = useChartDB();
     const { selectSidebarSection, selectedSidebarSection } = useLayout();
+    const { fitView } = useReactFlow();
 
     const schemasOptions: SelectBoxOption[] = useMemo(
         () =>
@@ -33,6 +35,18 @@ export const SidePanel: React.FC<SidePanelProps> = () => {
             ),
         [schemas]
     );
+
+    useEffect(() => {
+        if (filteredSchemas !== undefined) {
+            setTimeout(() => {
+                fitView({
+                    duration: 500,
+                    padding: 0.1,
+                    maxZoom: 0.8,
+                });
+            }, 500);
+        }
+    }, [filteredSchemas, fitView]);
 
     return (
         <aside className="flex h-full flex-col overflow-hidden">
