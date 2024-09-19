@@ -27,6 +27,8 @@ export interface DBTable {
     width?: number;
     comments?: string;
     hidden?: boolean;
+    auditable: boolean;
+    revisionEnabled: boolean;
 }
 
 export const shouldShowTablesBySchemaFilter = (
@@ -172,6 +174,8 @@ export const createTablesFromMetadata = ({
             isView: isView,
             createdAt: Date.now(),
             comments: tableInfo.comment ? tableInfo.comment : undefined,
+            auditable: tableInfo.auditable,
+            revisionEnabled: tableInfo.revisionEnabled,
         };
     });
 };

@@ -104,6 +104,8 @@ export const en = {
                     no_comments: 'No comments',
                     add_field: 'Add Field',
                     add_index: 'Add Index',
+                    auditable: 'Auditable',
+                    revisionEnabled: 'Revision Enabled',
                     index_select_fields: 'Select fields',
                     no_types_found: 'No types found',
                     field_name: 'Name',

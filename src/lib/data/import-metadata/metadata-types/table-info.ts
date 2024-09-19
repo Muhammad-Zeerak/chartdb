@@ -6,4 +6,6 @@ export interface TableInfo {
     engine: string;
     collation: string;
     comment?: string;
+    auditable: boolean;
+    revisionEnabled: boolean;
 }

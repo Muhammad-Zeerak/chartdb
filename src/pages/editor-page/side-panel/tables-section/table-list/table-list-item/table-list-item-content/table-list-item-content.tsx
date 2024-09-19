@@ -230,6 +230,38 @@ export const TableListItemContent: React.FC<TableListItemContentProps> = ({
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
+
+            <div className="ml-2 mt-2 flex flex-col gap-2">
+                <label className="flex items-center gap-2">
+                    <input
+                        type="checkbox"
+                        checked={table.auditable}
+                        onChange={(e) =>
+                            updateTable(table.id, {
+                                auditable: e.target.checked,
+                            })
+                        }
+                    />
+                    <span>
+                        {t('side_panel.tables_section.table.auditable')}
+                    </span>
+                </label>
+                <label className="flex items-center gap-2">
+                    <input
+                        type="checkbox"
+                        checked={table.revisionEnabled}
+                        onChange={(e) =>
+                            updateTable(table.id, {
+                                revisionEnabled: e.target.checked,
+                            })
+                        }
+                    />
+                    <span>
+                        {t('side_panel.tables_section.table.revisionEnabled')}
+                    </span>
+                </label>
+            </div>
+
             <Separator className="" />
             <div className="flex flex-1 items-center justify-between">
                 <ColorPicker
