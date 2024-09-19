@@ -174,8 +174,8 @@ export const createTablesFromMetadata = ({
             isView: isView,
             createdAt: Date.now(),
             comments: tableInfo.comment ? tableInfo.comment : undefined,
-            auditable: tableInfo.auditable,
-            revisionEnabled: tableInfo.revisionEnabled,
+            auditable: tableInfo.auditable ? tableInfo.auditable : true,
+            revisionEnabled: tableInfo.revisionEnabled ? tableInfo.revisionEnabled : true,
         };
     });
 };

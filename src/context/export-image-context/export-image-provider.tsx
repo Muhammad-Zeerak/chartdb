@@ -103,8 +103,99 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
         ]
     );
 
+    function transformDiagram(diagram: any) {
+        const result = diagram.tables.map((table: any) => {
+            const columns = table.fields.map((field: any) => ({
+                name: field.name,
+                type: field.type.name.toUpperCase(),
+                required: !field.nullable,
+                isPrimaryKey: field.primaryKey,
+            }));
+
+            const foreignKeys = diagram.relationships
+                .filter((rel: any) => rel.targetTableId === table.id)
+                .map((rel: any) => {
+                    let relationshipType = '';
+
+                    if (
+                        rel.sourceCardinality === 'many' &&
+                        rel.targetCardinality === 'one'
+                    ) {
+                        relationshipType = 'one-to-many';
+                    } else if (
+                        rel.sourceCardinality === 'one' &&
+                        rel.targetCardinality === 'many'
+                    ) {
+                        relationshipType = 'many-to-one';
+                    } else if (
+                        rel.sourceCardinality === 'one' &&
+                        rel.targetCardinality === 'one'
+                    ) {
+                        relationshipType = 'one-to-one';
+                    } else if (
+                        rel.sourceCardinality === 'many' &&
+                        rel.targetCardinality === 'many'
+                    ) {
+                        relationshipType = 'many-to-many';
+                    }
+
+                    return {
+                        type: relationshipType,
+                        referenced_table:
+                            diagram.tables.find(
+                                (t: any) => t.id === rel.sourceTableId
+                            )?.name || '',
+                        referenced_column:
+                            diagram.tables
+                                .find((t: any) => t.id === rel.sourceTableId)
+                                ?.fields.find(
+                                    (f: any) => f.id === rel.sourceFieldId
+                                )?.name || '',
+                        referencing_column:
+                            table.fields.find(
+                                (f: any) => f.id === rel.targetFieldId
+                            )?.name || '',
+                    };
+                });
+
+            return {
+                tableName: table.name,
+                name: table.name,
+                auditable: table.auditable,
+                revisionEnabled: table.revisionEnabled,
+                entityDefinition: {
+                    columns: columns,
+                },
+                foreignKeys: foreignKeys,
+            };
+        });
+
+        return result;
+    }
+
+    const exportJson: ExportImageContext['exportJson'] = useCallback(
+        async (type, currentDiagram) => {
+            if (type === 'json') {
+                const transformedDiagram = transformDiagram(currentDiagram);
+
+                const jsonData = JSON.stringify(transformedDiagram, null, 2);
+                const blob = new Blob([jsonData], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.setAttribute('download', `${diagramName}.json`);
+                a.setAttribute('href', url);
+                a.click();
+
+                URL.revokeObjectURL(url);
+                return;
+            }
+        },
+        [diagramName]
+    );
+
     return (
-        <exportImageContext.Provider value={{ exportImage }}>
+        <exportImageContext.Provider value={{ exportImage, exportJson }}>
             {children}
         </exportImageContext.Provider>
     );

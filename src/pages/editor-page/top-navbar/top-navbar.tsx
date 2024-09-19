@@ -79,7 +79,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
     const { isMd: isDesktop } = useBreakpoint('md');
     const { config, updateConfig } = useConfig();
     const [editMode, setEditMode] = useState(false);
-    const { exportImage } = useExportImage();
+    const { exportImage, exportJson } = useExportImage();
     const [editedDiagramName, setEditedDiagramName] =
         React.useState(diagramName);
     const inputRef = React.useRef<HTMLInputElement>(null);
@@ -125,6 +125,10 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
     const exportJPG = useCallback(() => {
         exportImage('jpeg');
     }, [exportImage]);
+
+    const exportJSON = useCallback(() => {
+        exportJson('json', currentDiagram);
+    }, [exportJson, currentDiagram]);
 
     const openChartDBIO = useCallback(() => {
         window.location.href = 'https://chartdb.io';
@@ -508,6 +512,9 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
                                         </MenubarItem>
                                         <MenubarItem onClick={exportSVG}>
                                             SVG
+                                        </MenubarItem>
+                                        <MenubarItem onClick={exportJSON}>
+                                            JSON
                                         </MenubarItem>
                                     </MenubarSubContent>
                                 </MenubarSub>
