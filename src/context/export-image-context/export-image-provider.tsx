@@ -109,7 +109,7 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
                 name: field.name,
                 type: field.type.name.toUpperCase(),
                 required: !field.nullable,
-                isPrimaryKey: field.primaryKey,
+                primaryKey: field.primaryKey,
             }));
 
             const foreignKeys = diagram.relationships
