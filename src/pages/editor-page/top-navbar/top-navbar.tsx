@@ -127,7 +127,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
     }, [exportImage]);
 
     const exportJSON = useCallback(() => {
-        exportJson('json', currentDiagram);
+        exportJson(currentDiagram);
     }, [exportJson, currentDiagram]);
 
     const openChartDBIO = useCallback(() => {

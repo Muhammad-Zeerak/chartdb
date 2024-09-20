@@ -174,22 +174,21 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
     }
 
     const exportJson: ExportImageContext['exportJson'] = useCallback(
-        async (type, currentDiagram) => {
-            if (type === 'json') {
-                const transformedDiagram = transformDiagram(currentDiagram);
+        async (currentDiagram) => {
+            
+            const transformedDiagram = transformDiagram(currentDiagram);
 
-                const jsonData = JSON.stringify(transformedDiagram, null, 2);
-                const blob = new Blob([jsonData], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
+            const jsonData = JSON.stringify(transformedDiagram, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
 
-                const a = document.createElement('a');
-                a.setAttribute('download', `${diagramName}.json`);
-                a.setAttribute('href', url);
-                a.click();
+            const a = document.createElement('a');
+            a.setAttribute('download', `${diagramName}.json`);
+            a.setAttribute('href', url);
+            a.click();
 
-                URL.revokeObjectURL(url);
-                return;
-            }
+            URL.revokeObjectURL(url);
+            return;
         },
         [diagramName]
     );
