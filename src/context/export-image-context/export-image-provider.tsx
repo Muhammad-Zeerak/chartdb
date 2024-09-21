@@ -103,8 +103,11 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
         ]
     );
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function transformDiagram(diagram: any) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const result = diagram.tables.map((table: any) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const columns = table.fields.map((field: any) => ({
                 name: field.name,
                 type: field.type.name.toUpperCase(),
@@ -113,7 +116,9 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
             }));
 
             const foreignKeys = diagram.relationships
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 .filter((rel: any) => rel.targetTableId === table.id)
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 .map((rel: any) => {
                     let relationshipType = '';
 
@@ -143,16 +148,20 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
                         type: relationshipType,
                         referenced_table:
                             diagram.tables.find(
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 (t: any) => t.id === rel.sourceTableId
                             )?.name || '',
                         referenced_column:
                             diagram.tables
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 .find((t: any) => t.id === rel.sourceTableId)
                                 ?.fields.find(
+                                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                     (f: any) => f.id === rel.sourceFieldId
                                 )?.name || '',
                         referencing_column:
                             table.fields.find(
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 (f: any) => f.id === rel.targetFieldId
                             )?.name || '',
                     };
@@ -175,7 +184,6 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
 
     const exportJson: ExportImageContext['exportJson'] = useCallback(
         async (currentDiagram) => {
-            
             const transformedDiagram = transformDiagram(currentDiagram);
 
             const jsonData = JSON.stringify(transformedDiagram, null, 2);

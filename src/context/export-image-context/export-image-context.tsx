@@ -4,6 +4,7 @@ import { emptyFn } from '@/lib/utils';
 export type ImageType = 'png' | 'jpeg' | 'svg';
 export interface ExportImageContext {
     exportImage: (type: ImageType) => Promise<void>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     exportJson: (currentDiagram?: any) => Promise<void>;
 }
 
