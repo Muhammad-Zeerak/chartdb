@@ -289,6 +289,8 @@ export const ChartDBProvider: React.FC<React.PropsWithChildren> = ({
                 name: `table_${tables.length + 1}`,
                 x: 0,
                 y: 0,
+                auditable: false,
+                revisionEnabled: false,
                 fields: [
                     {
                         id: generateId(),

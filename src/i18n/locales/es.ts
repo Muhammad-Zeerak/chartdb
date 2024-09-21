@@ -107,6 +107,8 @@ export const es: LanguageTranslation = {
                     index_select_fields: 'Seleccionar campos',
                     field_name: 'Nombre',
                     field_type: 'Tipo',
+                    auditable: 'Auditable',
+                    revisionEnabled: 'Revisión habilitada',
                     no_types_found: 'No types found', // TODO: Translate
                     field_actions: {
                         title: 'Atributos del Campo',

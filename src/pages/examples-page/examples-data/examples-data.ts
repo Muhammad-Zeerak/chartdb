@@ -36,6 +36,8 @@ export const examples: Example[] = [
                     name: 'departments',
                     x: 488.2056573620456,
                     y: -116.26128764468365,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'gaj3scrtaz46ezfmc162ingxf',
@@ -85,6 +87,8 @@ export const examples: Example[] = [
                     name: 'dept_emp',
                     x: 809.6786878331093,
                     y: 13.918352368775231,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'wcgycjif09xrq0ly3txkq6ocu',
@@ -157,6 +161,8 @@ export const examples: Example[] = [
                     name: 'dept_manager',
                     x: -248.93599999999998,
                     y: -84.16474999999997,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'ecx2zbzdc5o54e04aeg7tlg54',
@@ -229,6 +235,8 @@ export const examples: Example[] = [
                     name: 'employees',
                     x: 82.72000000000003,
                     y: 98.27199999999999,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '04csyx8ds9t3rh93txiqs4dm4',
@@ -309,6 +317,8 @@ export const examples: Example[] = [
                     name: 'salaries',
                     x: 493.50755288021537,
                     y: 227.8719999999999,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'b8c9v5vtpbnt5tjzcd3iat85f',
@@ -384,6 +394,8 @@ export const examples: Example[] = [
                     name: 'titles',
                     x: -251.04799999999966,
                     y: 220.9599999999999,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'hr2gdoc0wtwvs4pfqo6m0fwc3',
@@ -457,6 +469,8 @@ export const examples: Example[] = [
                     name: 'current_dept_emp',
                     x: 393.01599999999996,
                     y: 488.65600000000006,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '8tz9jdtfrbbl4c0e7nthrj90g',
@@ -507,6 +521,8 @@ export const examples: Example[] = [
                     name: 'dept_emp_latest_date',
                     x: 70.62399999999991,
                     y: 469.6479999999999,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'q3oiwd0p27bipsy4kg5dkxri0',
@@ -637,6 +653,8 @@ export const examples: Example[] = [
                     name: 'brands',
                     x: 668.008,
                     y: 260.704,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '8vuje8jgqclyypvmeyud3ouq4',
@@ -678,6 +696,8 @@ export const examples: Example[] = [
                     name: 'categories',
                     x: 182.79187747914773,
                     y: 348.4095927710844,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '3y6v954bmnmrhsu88pegssisz',
@@ -719,6 +739,8 @@ export const examples: Example[] = [
                     name: 'customers',
                     x: -133.71975495829474,
                     y: 728.4726929796104,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'dtz6h71bnnnqqmc0gj4m7s4b2',
@@ -844,6 +866,8 @@ export const examples: Example[] = [
                     name: 'order_items',
                     x: 847.4799999999998,
                     y: 804.2781249999998,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'rwt3l7vgvcn2wez9z78xrne2e',
@@ -930,6 +954,8 @@ export const examples: Example[] = [
                     name: 'orders',
                     x: 258.9759999999999,
                     y: 803.0563749999998,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'tp12zsqygr6q3di3iie5c69q4',
@@ -1022,6 +1048,8 @@ export const examples: Example[] = [
                     name: 'products',
                     x: 1107.6639999999998,
                     y: 350.98524999999995,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'cb7jt8iz26dtyiepk55irq4wj',
@@ -1101,6 +1129,8 @@ export const examples: Example[] = [
                     name: 'staff',
                     x: 599.08,
                     y: 512.8480000000001,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'e7kfdzkympiu6zdvpeurqxu6r',
@@ -1205,6 +1235,8 @@ export const examples: Example[] = [
                     name: 'stocks',
                     x: -146.94658498609795,
                     y: 240.26239518072288,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'd40dt5g1thzuzndldviri2jxj',
@@ -1259,6 +1291,8 @@ export const examples: Example[] = [
                     name: 'stores',
                     x: -132.385320111214,
                     y: 412.5383278962002,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'dsout0pmyihlkq72108vs6655',
@@ -1511,6 +1545,8 @@ export const examples: Example[] = [
                     name: 'actor',
                     x: -230.40983939824048,
                     y: 479.3344610354799,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'xqx13khvb9m0vzfepcycizcai',
@@ -1587,6 +1623,8 @@ export const examples: Example[] = [
                     name: 'address',
                     x: 95.60771046641412,
                     y: 378.91038538270215,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'b0iylw1gbvp09vtpxdcs8d3zn',
@@ -1712,6 +1750,8 @@ export const examples: Example[] = [
                     name: 'category',
                     x: 971.7954244648793,
                     y: 676.4289805326614,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'dhacvdae20ms5wc3inljozrz2',
@@ -1769,6 +1809,8 @@ export const examples: Example[] = [
                     name: 'city',
                     x: 447.23808020530305,
                     y: 843.0068735482081,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'ozcebtrmnoar9spk7jq4b2gfz',
@@ -1841,6 +1883,8 @@ export const examples: Example[] = [
                     name: 'country',
                     x: 862.6623456852019,
                     y: 906.4240231670566,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'jh3rnowvtvmu4qwbjn8s2wjnv',
@@ -1898,6 +1942,8 @@ export const examples: Example[] = [
                     name: 'customer',
                     x: -222.69179435527712,
                     y: -133.6900980855134,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '5as8lm61s6t2u9chbixfeyrmd',
@@ -2049,6 +2095,8 @@ export const examples: Example[] = [
                     name: 'film',
                     x: 566.8187258202024,
                     y: 314.30426726271173,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '9p7plypt0h2pi24sd1maglln2',
@@ -2224,6 +2272,8 @@ export const examples: Example[] = [
                     name: 'film_actor',
                     x: -231.61785978573243,
                     y: 268.50456342335843,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'h3ugzzz8kx4tjvx3vpnk271gx',
@@ -2289,6 +2339,8 @@ export const examples: Example[] = [
                     name: 'film_category',
                     x: 1367.9870370556057,
                     y: 918.6722604164116,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '0i0bfvjxpfvhadfvmq04nccau',
@@ -2347,6 +2399,8 @@ export const examples: Example[] = [
                     name: 'inventory',
                     x: 837.2463612754104,
                     y: 62.66553896452018,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'qjhszd97v59kifufel97hj33j',
@@ -2423,6 +2477,8 @@ export const examples: Example[] = [
                     name: 'language',
                     x: 1145.4852455715575,
                     y: 482.0414219458479,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'fp615hegqw52lssi3xnzx05rs',
@@ -2477,6 +2533,8 @@ export const examples: Example[] = [
                     name: 'payment',
                     x: 499.9297120587544,
                     y: -137.56446222788708,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'r07b25xp5enas53osnkykhshc',
@@ -2579,6 +2637,8 @@ export const examples: Example[] = [
                     name: 'rental',
                     x: 162.2336746262622,
                     y: 67.05782849810606,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'up97wwftgf0b7b2td9p0jehjb',
@@ -2702,6 +2762,8 @@ export const examples: Example[] = [
                     name: 'staff',
                     x: 1503.0448885421442,
                     y: 282.1436895892762,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: 'vxnoi2w8ap9rcxm8e2jlkbkpa',
@@ -2847,6 +2909,8 @@ export const examples: Example[] = [
                     name: 'store',
                     x: 95.60771046641412,
                     y: 696.1542093282828,
+                    auditable: false,
+                    revisionEnabled: false,
                     fields: [
                         {
                             id: '93r7rr674bo09jhtv2imzdp6v',
