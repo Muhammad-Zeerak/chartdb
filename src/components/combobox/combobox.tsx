@@ -1,8 +1,8 @@
 import React from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/button/button';
+import { cn } from '../../lib/utils';
+import { Button } from '../../components/button/button';
 import {
     Command,
     CommandEmpty,
@@ -10,13 +10,13 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from '@/components/command/command';
+} from '../../components/command/command';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from '@/components/popover/popover';
-import { ScrollArea } from '@/components/scroll-area/scroll-area';
+} from '../../components/popover/popover';
+import { ScrollArea } from '../../components/scroll-area/scroll-area';
 
 export type ComboboxOptions = {
     value: string;

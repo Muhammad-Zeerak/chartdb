@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toggle } from '@/components/toggle/toggle';
+import { Toggle } from '../../../../../../../../components/toggle/toggle';
 
 export const TableFieldToggle = React.forwardRef<
     React.ElementRef<typeof Toggle>,

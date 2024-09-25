@@ -1,7 +1,7 @@
 import { CaretSortIcon, CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
 import * as React from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 import {
     Command,
@@ -10,13 +10,13 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from '@/components/command/command';
+} from '../../components/command/command';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from '@/components/popover/popover';
-import { ScrollArea } from '@/components/scroll-area/scroll-area';
+} from '../../components/popover/popover';
+import { ScrollArea } from '../../components/scroll-area/scroll-area';
 import { useTranslation } from 'react-i18next';
 
 export interface SelectBoxOption {

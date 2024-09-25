@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { emptyFn } from '@/lib/utils';
+import { emptyFn } from '../../lib/utils';
 
 export type Theme = 'light' | 'dark' | 'system';
 export type EffectiveTheme = Exclude<Theme, 'system'>;

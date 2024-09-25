@@ -7,8 +7,8 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-} from '@/components/dialog/dialog';
-import { Spinner } from '@/components/spinner/spinner';
+} from '../../components/dialog/dialog';
+import { Spinner } from '../../components/spinner/spinner';
 import { Hourglass } from 'lucide-react';
 import { DialogTitle } from '@radix-ui/react-dialog';
 

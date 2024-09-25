@@ -2,12 +2,12 @@ import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
-} from '@/components/hover-card/hover-card';
-import { Label } from '@/components/label/label';
+} from '../../../../components/hover-card/hover-card';
+import { Label } from '../../../../components/label/label';
 import { Info } from 'lucide-react';
 import React from 'react';
-import SSMSInstructions from '@/assets/ssms-instructions.png';
-import { ZoomableImage } from '@/components/zoomable-image/zoomable-image';
+import SSMSInstructions from '../../../../assets/ssms-instructions.png';
+import { ZoomableImage } from '../../../../components/zoomable-image/zoomable-image';
 import { useTranslation } from 'react-i18next';
 
 export interface SSMSInfoProps {}

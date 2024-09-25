@@ -1,4 +1,4 @@
-import { getOperatingSystem } from '@/lib/utils';
+import { getOperatingSystem } from '../../lib/utils';
 
 export enum KeyboardShortcutAction {
     REDO = 'redo',

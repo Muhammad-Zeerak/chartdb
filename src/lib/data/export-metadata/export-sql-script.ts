@@ -1,9 +1,9 @@
 import { generateText } from 'ai';
 import { createOpenAI } from '@ai-sdk/openai';
 import { Diagram } from '../../domain/diagram';
-import { OPENAI_API_KEY } from '@/lib/env';
-import { DatabaseType } from '@/lib/domain/database-type';
-import { DBTable } from '@/lib/domain/db-table';
+import { OPENAI_API_KEY } from '../../../lib/env';
+import { DatabaseType } from '../../../lib/domain/database-type';
+import { DBTable } from '../../../lib/domain/db-table';
 import { DataType } from '../data-types';
 
 const openai = createOpenAI({

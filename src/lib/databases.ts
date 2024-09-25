@@ -1,21 +1,21 @@
-import MysqlLogo from '@/assets/mysql_logo.png';
-import MysqlLogoDark from '@/assets/mysql_logo_dark.png';
-import PostgresqlLogo from '@/assets/postgresql_logo.png';
-import PostgresqlLogoDark from '@/assets/postgresql_logo_dark.png';
-import MariaDBLogo from '@/assets/mariadb_logo.png';
-import MariaDBLogoDark from '@/assets/mariadb_logo_dark.png';
-import SqliteLogo from '@/assets/sqlite_logo.png';
-import SqliteLogoDark from '@/assets/sqlite_logo_dark.png';
-import SqlServerLogo from '@/assets/sql_server_logo.png';
-import SqlServerLogoDark from '@/assets/sql_server_logo_dark.png';
-import MysqlLogo2 from '@/assets/mysql_logo_2.png';
-import PostgresqlLogo2 from '@/assets/postgresql_logo_2.png';
-import MariaDBLogo2 from '@/assets/mariadb_logo_2.png';
-import SqliteLogo2 from '@/assets/sqlite_logo_2.png';
-import SqlServerLogo2 from '@/assets/sql_server_logo_2.png';
-import GeneralDBLogo2 from '@/assets/general_db_logo_2.png';
+import MysqlLogo from '../assets/mysql_logo.png';
+import MysqlLogoDark from '../assets/mysql_logo_dark.png';
+import PostgresqlLogo from '../assets/postgresql_logo.png';
+import PostgresqlLogoDark from '../assets/postgresql_logo_dark.png';
+import MariaDBLogo from '../assets/mariadb_logo.png';
+import MariaDBLogoDark from '../assets/mariadb_logo_dark.png';
+import SqliteLogo from '../assets/sqlite_logo.png';
+import SqliteLogoDark from '../assets/sqlite_logo_dark.png';
+import SqlServerLogo from '../assets/sql_server_logo.png';
+import SqlServerLogoDark from '../assets/sql_server_logo_dark.png';
+import MysqlLogo2 from '../assets/mysql_logo_2.png';
+import PostgresqlLogo2 from '../assets/postgresql_logo_2.png';
+import MariaDBLogo2 from '../assets/mariadb_logo_2.png';
+import SqliteLogo2 from '../assets/sqlite_logo_2.png';
+import SqlServerLogo2 from '../assets/sql_server_logo_2.png';
+import GeneralDBLogo2 from '../assets/general_db_logo_2.png';
 import { DatabaseType } from './domain/database-type';
-import { EffectiveTheme } from '@/context/theme-context/theme-context';
+import { EffectiveTheme } from '../context/theme-context/theme-context';
 
 export const databaseTypeToLabelMap: Record<DatabaseType, string> = {
     [DatabaseType.GENERIC]: 'Generic',

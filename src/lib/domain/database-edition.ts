@@ -1,8 +1,8 @@
 import { DatabaseType } from './database-type';
-import SupabaseImage from '@/assets/supabase.png';
-import TimescaleImage from '@/assets/timescale.png';
-import MySql5_7Image from '@/assets/mysql_5_7.png';
-import SqlServerImage from '@/assets/sql_server_logo_2.png';
+import SupabaseImage from '../../assets/supabase.png';
+import TimescaleImage from '../../assets/timescale.png';
+import MySql5_7Image from '../../assets/mysql_5_7.png';
+import SqlServerImage from '../../assets/sql_server_logo_2.png';
 
 export enum DatabaseEdition {
     // PostgreSQL

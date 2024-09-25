@@ -10,7 +10,7 @@ import {
     adjustTablePositions,
     createTablesFromMetadata,
 } from './db-table';
-import { generateDiagramId } from '@/lib/utils';
+import { generateDiagramId } from '../../lib/utils';
 export interface Diagram {
     id: string;
     name: string;

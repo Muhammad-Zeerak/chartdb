@@ -5,11 +5,11 @@ import {
     useConnection,
     useUpdateNodeInternals,
 } from '@xyflow/react';
-import { Button } from '@/components/button/button';
+import { Button } from '../../../../components/button/button';
 import { KeyRound, Trash2 } from 'lucide-react';
 
-import { DBField } from '@/lib/domain/db-field';
-import { useChartDB } from '@/hooks/use-chartdb';
+import { DBField } from '../../../../lib/domain/db-field';
+import { useChartDB } from '../../../../hooks/use-chartdb';
 
 export const LEFT_HANDLE_ID_PREFIX = 'left_';
 export const RIGHT_HANDLE_ID_PREFIX = 'right_';

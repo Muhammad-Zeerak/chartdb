@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo } from 'react';
-import { Accordion } from '@/components/accordion/accordion';
+import { Accordion } from '../../../../../components/accordion/accordion';
 import { TableListItem } from './table-list-item/table-list-item';
-import { DBTable } from '@/lib/domain/db-table';
-import { useLayout } from '@/hooks/use-layout';
+import { DBTable } from '../../../../../lib/domain/db-table';
+import { useLayout } from '../../../../../hooks/use-layout';
 
 export interface TableListProps {
     tables: DBTable[];

@@ -1,19 +1,19 @@
 import React from 'react';
 import { Ellipsis, Trash2 } from 'lucide-react';
-import { Button } from '@/components/button/button';
-import { DBIndex } from '@/lib/domain/db-index';
-import { DBField } from '@/lib/domain/db-field';
+import { Button } from '../../../../../../../../components/button/button';
+import { DBIndex } from '../../../../../../../../lib/domain/db-index';
+import { DBField } from '../../../../../../../../lib/domain/db-field';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from '@/components/popover/popover';
-import { Separator } from '@/components/separator/separator';
-import { Checkbox } from '@/components/checkbox/checkbox';
-import { Label } from '@/components/label/label';
-import { Input } from '@/components/input/input';
+} from '../../../../../../../../components/popover/popover';
+import { Separator } from '../../../../../../../../components/separator/separator';
+import { Checkbox } from '../../../../../../../../components/checkbox/checkbox';
+import { Label } from '../../../../../../../../components/label/label';
+import { Input } from '../../../../../../../../components/input/input';
 import { useTranslation } from 'react-i18next';
-import { SelectBox } from '@/components/select-box/select-box';
+import { SelectBox } from '../../../../../../../../components/select-box/select-box';
 
 export interface TableIndexProps {
     index: DBIndex;

@@ -1,22 +1,22 @@
 import React, { useCallback } from 'react';
 import { Example } from './examples-data/examples-data';
-import { randomColor } from '@/lib/colors';
+import { randomColor } from '../../lib/colors';
 import { Import } from 'lucide-react';
-import { Label } from '@/components/label/label';
-import { Button } from '@/components/button/button';
+import { Label } from '../../components/label/label';
+import { Button } from '../../components/button/button';
 import {
     databaseSecondaryLogoMap,
     databaseTypeToLabelMap,
-} from '@/lib/databases';
+} from '../../lib/databases';
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
-} from '@/components/tooltip/tooltip';
-import { useStorage } from '@/hooks/use-storage';
-import { Diagram } from '@/lib/domain/diagram';
+} from '../../components/tooltip/tooltip';
+import { useStorage } from '../../hooks/use-storage';
+import { Diagram } from '../../lib/domain/diagram';
 import { useNavigate } from 'react-router-dom';
-import { useTheme } from '@/hooks/use-theme';
+import { useTheme } from '../../hooks/use-theme';
 
 export interface ExampleCardProps {
     example: Example;

@@ -10,8 +10,9 @@ import {
     getViewportForBounds,
     useReactFlow,
 } from '@xyflow/react';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useFullScreenLoader } from '@/hooks/use-full-screen-spinner';
+import { useChartDB } from '../../hooks/use-chartdb';
+import { useFullScreenLoader } from '../../hooks/use-full-screen-spinner';
+import tokenManager from './tokenManager';
 
 const imageWidth = 1024;
 const imageHeight = 768;
@@ -103,6 +104,32 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
         ]
     );
 
+    const typeMapping: Record<string, string> = {
+        bigint: 'INT',
+        binary: 'STRING',
+        blob: 'STRING',
+        boolean: 'BOOLEAN',
+        char: 'STRING',
+        date: 'DATE',
+        datetime: 'DATE',
+        decimal: 'FLOAT',
+        double: 'FLOAT',
+        enum: 'STRING',
+        float: 'FLOAT',
+        int: 'INT',
+        json: 'STRING',
+        numeric: 'FLOAT',
+        real: 'FLOAT',
+        set: 'STRING',
+        smallint: 'INT',
+        text: 'TEXT',
+        time: 'DATE',
+        timestamp: 'DATE',
+        uuid: 'STRING',
+        varbinary: 'STRING',
+        varchar: 'STRING',
+    };
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function transformDiagram(diagram: any) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -110,7 +137,7 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const columns = table.fields.map((field: any) => ({
                 name: field.name,
-                type: field.type.name.toUpperCase(),
+                type: typeMapping[field.type.name] || 'STRING',
                 required: !field.nullable,
                 primaryKey: field.primaryKey,
             }));
@@ -201,8 +228,46 @@ export const ExportImageProvider: React.FC<React.PropsWithChildren> = ({
         [diagramName]
     );
 
+
+
+    const exportJsonApi: ExportImageContext['exportJsonApi'] = useCallback(
+        async (currentDiagram) => {
+            const transformedDiagram = transformDiagram(currentDiagram);
+            const jsonData = JSON.stringify(transformedDiagram, null, 2);
+
+            try {
+                const token = tokenManager.getToken();
+                const response = await fetch(
+                    'http://124.109.36.79:8080/api/v1/entity/bulk',
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`,
+                        },
+                        body: jsonData,
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const responseData = await response.json();
+                console.log('Success:', responseData);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+
+            return;
+        },
+        [diagramName]
+    );
+
     return (
-        <exportImageContext.Provider value={{ exportImage, exportJson }}>
+        <exportImageContext.Provider
+            value={{ exportImage, exportJson, exportJsonApi }}
+        >
             {children}
         </exportImageContext.Provider>
     );

@@ -1,4 +1,4 @@
-import { DatabaseEdition } from '@/lib/domain/database-edition';
+import { DatabaseEdition } from '../../../../lib/domain/database-edition';
 
 const sqlServerQuery = `WITH fk_info AS (
     SELECT

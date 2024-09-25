@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonProps } from '@/components/button/button';
+import { Button, ButtonProps } from '../../../../components/button/button';
 
 export const ListItemHeaderButton: React.FC<ButtonProps> = React.forwardRef<
     HTMLButtonElement,

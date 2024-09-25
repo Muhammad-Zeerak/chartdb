@@ -1,13 +1,13 @@
 import { createContext } from 'react';
-import { DBTable } from '@/lib/domain/db-table';
-import { emptyFn } from '@/lib/utils';
-import { DatabaseType } from '@/lib/domain/database-type';
-import { DBField } from '@/lib/domain/db-field';
-import { DBIndex } from '@/lib/domain/db-index';
-import { DBRelationship } from '@/lib/domain/db-relationship';
-import { Diagram } from '@/lib/domain/diagram';
-import { DatabaseEdition } from '@/lib/domain/database-edition';
-import { DBSchema } from '@/lib/domain/db-schema';
+import { DBTable } from '../../lib/domain/db-table';
+import { emptyFn } from '../../lib/utils';
+import { DatabaseType } from '../../lib/domain/database-type';
+import { DBField } from '../../lib/domain/db-field';
+import { DBIndex } from '../../lib/domain/db-index';
+import { DBRelationship } from '../../lib/domain/db-relationship';
+import { Diagram } from '../../lib/domain/diagram';
+import { DatabaseEdition } from '../../lib/domain/database-edition';
+import { DBSchema } from '../../lib/domain/db-schema';
 
 export interface ChartDBContext {
     diagramId: string;

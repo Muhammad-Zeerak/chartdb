@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import { RedoUndoAction } from './redo-undo-action';
-import { emptyFn } from '@/lib/utils';
+import { emptyFn } from '../../lib/utils';
 
 export interface RedoUndoStackContext {
     redoStack: RedoUndoAction[];

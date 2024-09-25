@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {
     Toast,
     ToastClose,
@@ -6,8 +6,8 @@ import {
     ToastProvider,
     ToastTitle,
     ToastViewport,
-} from '@/components/toast/toast';
-import { useToast } from '@/components/toast/use-toast';
+} from '../../components/toast/toast';
+import { useToast } from '../../components/toast/use-toast';
 
 export function Toaster() {
     const { toasts } = useToast();

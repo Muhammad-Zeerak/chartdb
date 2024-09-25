@@ -3,7 +3,7 @@ import { DBField } from './db-field';
 import { TableInfo } from '../data/import-metadata/metadata-types/table-info';
 import { ColumnInfo } from '../data/import-metadata/metadata-types/column-info';
 import { IndexInfo } from '../data/import-metadata/metadata-types/index-info';
-import { greyColor, randomColor } from '@/lib/colors';
+import { greyColor, randomColor } from '../../lib/colors';
 import { DBRelationship } from './db-relationship';
 import { PrimaryKeyInfo } from '../data/import-metadata/metadata-types/primary-key-info';
 import { ViewInfo } from '../data/import-metadata/metadata-types/view-info';

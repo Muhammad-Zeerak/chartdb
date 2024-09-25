@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Button } from '@/components/button/button';
+import { Button } from '../../components/button/button';
 import {
     Dialog,
     DialogClose,
@@ -7,14 +7,17 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from '@/components/dialog/dialog';
-import { useDialog } from '@/hooks/use-dialog';
+} from '../../components/dialog/dialog';
+import { useDialog } from '../../hooks/use-dialog';
 import { DialogProps } from '@radix-ui/react-dialog';
 import { FileOutput, FileMinus2, FileType2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { SelectBox, SelectBoxOption } from '@/components/select-box/select-box';
-import { useLayout } from '@/hooks/use-layout';
+import { useChartDB } from '../../hooks/use-chartdb';
+import {
+    SelectBox,
+    SelectBoxOption,
+} from '../../components/select-box/select-box';
+import { useLayout } from '../../hooks/use-layout';
 import { useReactFlow } from '@xyflow/react';
 
 const ErrorMessageRelationshipFieldsNotSameType =

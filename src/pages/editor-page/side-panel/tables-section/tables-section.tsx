@@ -1,20 +1,23 @@
 import React, { useCallback, useMemo } from 'react';
 import { TableList } from './table-list/table-list';
-import { Button } from '@/components/button/button';
+import { Button } from '../../../../components/button/button';
 import { Table, ListCollapse } from 'lucide-react';
-import { Input } from '@/components/input/input';
+import { Input } from '../../../../components/input/input';
 
-import { DBTable, shouldShowTablesBySchemaFilter } from '@/lib/domain/db-table';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useLayout } from '@/hooks/use-layout';
-import { EmptyState } from '@/components/empty-state/empty-state';
-import { ScrollArea } from '@/components/scroll-area/scroll-area';
+import {
+    DBTable,
+    shouldShowTablesBySchemaFilter,
+} from '../../../../lib/domain/db-table';
+import { useChartDB } from '../../../../hooks/use-chartdb';
+import { useLayout } from '../../../../hooks/use-layout';
+import { EmptyState } from '../../../../components/empty-state/empty-state';
+import { ScrollArea } from '../../../../components/scroll-area/scroll-area';
 import { useTranslation } from 'react-i18next';
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
-} from '@/components/tooltip/tooltip';
+} from '../../../../components/tooltip/tooltip';
 import { useViewport } from '@xyflow/react';
 
 export interface TablesSectionProps {}

@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
-import EmptyStateImage from '@/assets/empty_state.png';
-import { Label } from '@/components/label/label';
-import { cn } from '@/lib/utils';
+import EmptyStateImage from '../../assets/empty_state.png';
+import { Label } from '../../components/label/label';
+import { cn } from '../../lib/utils';
 
 export interface EmptyStateProps {
     title: string;

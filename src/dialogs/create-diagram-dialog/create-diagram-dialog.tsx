@@ -1,19 +1,19 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Dialog, DialogContent } from '@/components/dialog/dialog';
+import { Dialog, DialogContent } from '../../components/dialog/dialog';
 import { DialogProps } from '@radix-ui/react-dialog';
-import { DatabaseType } from '@/lib/domain/database-type';
-import { useStorage } from '@/hooks/use-storage';
-import { Diagram, loadFromDatabaseMetadata } from '@/lib/domain/diagram';
+import { DatabaseType } from '../../lib/domain/database-type';
+import { useStorage } from '../../hooks/use-storage';
+import { Diagram, loadFromDatabaseMetadata } from '../../lib/domain/diagram';
 import { useNavigate } from 'react-router-dom';
-import { useConfig } from '@/hooks/use-config';
+import { useConfig } from '../../hooks/use-config';
 import {
     DatabaseMetadata,
     loadDatabaseMetadata,
-} from '@/lib/data/import-metadata/metadata-types/database-metadata';
-import { generateDiagramId } from '@/lib/utils';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useDialog } from '@/hooks/use-dialog';
-import { DatabaseEdition } from '@/lib/domain/database-edition';
+} from '../../lib/data/import-metadata/metadata-types/database-metadata';
+import { generateDiagramId } from '../../lib/utils';
+import { useChartDB } from '../../hooks/use-chartdb';
+import { useDialog } from '../../hooks/use-dialog';
+import { DatabaseEdition } from '../../lib/domain/database-edition';
 import { SelectDatabase } from './select-database/select-database';
 import { CreateDiagramDialogStep } from './create-diagram-dialog-step';
 import { ImportDatabase } from '../common/import-database/import-database';

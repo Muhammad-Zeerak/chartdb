@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { EffectiveTheme, ThemeContext } from './theme-context';
 import { useMediaQuery } from 'react-responsive';
-import { useLocalConfig } from '@/hooks/use-local-config';
+import { useLocalConfig } from '../../hooks/use-local-config';
 
 export const ThemeProvider: React.FC<React.PropsWithChildren> = ({
     children,

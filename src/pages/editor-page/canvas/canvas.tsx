@@ -23,32 +23,32 @@ import {
     TableNodeType,
 } from './table-node/table-node';
 import { TableEdge, TableEdgeType } from './table-edge';
-import { useChartDB } from '@/hooks/use-chartdb';
+import { useChartDB } from '../../../hooks/use-chartdb';
 import {
     LEFT_HANDLE_ID_PREFIX,
     TARGET_ID_PREFIX,
 } from './table-node/table-node-field';
 import { Toolbar } from './toolbar/toolbar';
-import { useToast } from '@/components/toast/use-toast';
+import { useToast } from '../../../components/toast/use-toast';
 import { Pencil, LayoutGrid } from 'lucide-react';
-import { Button } from '@/components/button/button';
-import { useLayout } from '@/hooks/use-layout';
-import { useBreakpoint } from '@/hooks/use-breakpoint';
-import { Badge } from '@/components/badge/badge';
-import { useTheme } from '@/hooks/use-theme';
+import { Button } from '../../../components/button/button';
+import { useLayout } from '../../../hooks/use-layout';
+import { useBreakpoint } from '../../../hooks/use-breakpoint';
+import { Badge } from '../../../components/badge/badge';
+import { useTheme } from '../../../hooks/use-theme';
 import { useTranslation } from 'react-i18next';
 import {
     DBTable,
     adjustTablePositions,
     shouldShowTablesBySchemaFilter,
-} from '@/lib/domain/db-table';
-import { useLocalConfig } from '@/hooks/use-local-config';
+} from '../../../lib/domain/db-table';
+import { useLocalConfig } from '../../../hooks/use-local-config';
 import {
     Tooltip,
     TooltipTrigger,
     TooltipContent,
-} from '@/components/tooltip/tooltip';
-import { useDialog } from '@/hooks/use-dialog';
+} from '../../../components/tooltip/tooltip';
+import { useDialog } from '../../../hooks/use-dialog';
 import { MarkerDefinitions } from './marker-definitions';
 import { CanvasContextMenu } from './canvas-context-menu';
 

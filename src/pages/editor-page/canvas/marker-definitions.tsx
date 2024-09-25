@@ -1,7 +1,7 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
-import { Cardinality } from '@/lib/domain/db-relationship';
-import { useLocalConfig } from '@/hooks/use-local-config';
+import { cn } from '../../../lib/utils';
+import { Cardinality } from '../../../lib/domain/db-relationship';
+import { useLocalConfig } from '../../../hooks/use-local-config';
 import { getCardinalityMarkerId } from './canvas-utils';
 
 export const MarkerDefinitions: React.FC = () => {

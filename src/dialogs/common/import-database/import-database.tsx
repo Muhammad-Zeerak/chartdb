@@ -1,38 +1,41 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Button } from '@/components/button/button';
+import { Button } from '../../../components/button/button';
 import {
     DialogClose,
     DialogDescription,
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from '@/components/dialog/dialog';
-import { ToggleGroup, ToggleGroupItem } from '@/components/toggle/toggle-group';
-import { DatabaseType } from '@/lib/domain/database-type';
-import { databaseSecondaryLogoMap } from '@/lib/databases';
-import { CodeSnippet } from '@/components/code-snippet/code-snippet';
-import { Textarea } from '@/components/textarea/textarea';
-import { importMetadataScripts } from '@/lib/data/import-metadata/scripts/scripts';
+} from '../../../components/dialog/dialog';
+import {
+    ToggleGroup,
+    ToggleGroupItem,
+} from '../../../components/toggle/toggle-group';
+import { DatabaseType } from '../../../lib/domain/database-type';
+import { databaseSecondaryLogoMap } from '../../../lib/databases';
+import { CodeSnippet } from '../../../components/code-snippet/code-snippet';
+import { Textarea } from '../../../components/textarea/textarea';
+import { importMetadataScripts } from '../../../lib/data/import-metadata/scripts/scripts';
 import {
     DatabaseEdition,
     databaseEditionToImageMap,
     databaseEditionToLabelMap,
     databaseTypeToEditionMap,
-} from '@/lib/domain/database-edition';
+} from '../../../lib/domain/database-edition';
 import {
     Avatar,
     AvatarFallback,
     AvatarImage,
-} from '@/components/avatar/avatar';
+} from '../../../components/avatar/avatar';
 import { SSMSInfo } from './ssms-info/ssms-info';
 import { useTranslation } from 'react-i18next';
-import { Tabs, TabsList, TabsTrigger } from '@/components/tabs/tabs';
+import { Tabs, TabsList, TabsTrigger } from '../../../components/tabs/tabs';
 import {
     DatabaseClient,
     databaseClientToLabelMap,
     databaseTypeToClientsMap,
-} from '@/lib/domain/database-clients';
-import { isDatabaseMetadata } from '@/lib/data/import-metadata/metadata-types/database-metadata';
+} from '../../../lib/domain/database-clients';
+import { isDatabaseMetadata } from '../../../lib/data/import-metadata/metadata-types/database-metadata';
 
 const errorScriptOutputMessage =
     'Invalid JSON. Please correct it or contact us at chartdb.io@gmail.com for help.';

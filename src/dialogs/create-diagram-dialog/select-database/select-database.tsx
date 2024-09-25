@@ -1,20 +1,26 @@
 import React, { useCallback } from 'react';
-import { Button } from '@/components/button/button';
+import { Button } from '../../../components/button/button';
 import {
     DialogClose,
     DialogDescription,
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from '@/components/dialog/dialog';
+} from '../../../components/dialog/dialog';
 
-import { ToggleGroup, ToggleGroupItem } from '@/components/toggle/toggle-group';
-import { DatabaseType } from '@/lib/domain/database-type';
-import { databaseTypeToLabelMap, getDatabaseLogo } from '@/lib/databases';
-import { Link } from '@/components/link/link';
+import {
+    ToggleGroup,
+    ToggleGroupItem,
+} from '../../../components/toggle/toggle-group';
+import { DatabaseType } from '../../../lib/domain/database-type';
+import {
+    databaseTypeToLabelMap,
+    getDatabaseLogo,
+} from '../../../lib/databases';
+import { Link } from '../../../components/link/link';
 import { LayoutGrid } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@/hooks/use-theme';
+import { useTheme } from '../../../hooks/use-theme';
 
 export interface SelectDatabaseProps {
     onContinue: () => void;

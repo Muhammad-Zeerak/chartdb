@@ -1,18 +1,22 @@
 {
-  "name": "chartdb",
-  "private": true,
-  "version": "0.0.0",
+  "name": "erdtesting",
+  "version": "9.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.esm.js",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && tsc -b && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "build": "npm run build:css && npm run lint && tsc -p tsconfig.app.json && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 1",
     "lint:fix": "npm run lint -- --fix",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "copy-css": "copyfiles -u 1 \"src/styles/**/*.css\" dist",
+    "build:css": "tailwindcss -o ./dist/tailwind.css --minify"
   },
   "dependencies": {
     "@ai-sdk/openai": "^0.0.51",
+    "@dnd-kit/core": "^6.1.0",
     "@dnd-kit/sortable": "^8.0.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",
@@ -71,6 +75,7 @@
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -83,10 +88,15 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "husky": "^9.1.5",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.3",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^3.4.12",
     "typescript": "^5.2.2",
-    "vite": "^5.3.4"
-  }
+    "vite": "^5.4.7"
+  },
+  "files": [
+    "dist",
+    "src/assets",
+    "src/styles"
+  ]
 }

@@ -8,12 +8,15 @@ module.exports = {
     theme: {
         container: {
             center: true,
-            padding: '2rem',
+            padding: '0.5rem',
             screens: {
                 '2xl': '1400px',
             },
         },
         extend: {
+            width: {
+                '95vw': '95vw',
+            },
             fontFamily: {
                 primary: ['"Raleway"', ...defaultTheme.fontFamily.sans],
             },

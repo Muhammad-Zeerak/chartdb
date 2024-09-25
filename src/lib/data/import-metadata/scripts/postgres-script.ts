@@ -1,8 +1,8 @@
-import { DatabaseClient } from '@/lib/domain/database-clients';
+import { DatabaseClient } from '../../../../lib/domain/database-clients';
 import {
     DatabaseEdition,
     databaseEditionToLabelMap,
-} from '@/lib/domain/database-edition';
+} from '../../../../lib/domain/database-edition';
 
 export const getPostgresQuery = (
     options: {

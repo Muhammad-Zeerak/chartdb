@@ -12,40 +12,38 @@ import {
     MenubarSubContent,
     MenubarSubTrigger,
     MenubarTrigger,
-} from '@/components/menubar/menubar';
-import { Label } from '@/components/label/label';
-import { Button } from '@/components/button/button';
+} from '../../../components/menubar/menubar';
+import { Label } from '../../../components/label/label';
+import { Button } from '../../../components/button/button';
 import { Check, Pencil } from 'lucide-react';
-import { Input } from '@/components/input/input';
-import { useChartDB } from '@/hooks/use-chartdb';
+import { Input } from '../../../components/input/input';
+import { useChartDB } from '../../../hooks/use-chartdb';
 import { useClickAway, useKeyPressEvent } from 'react-use';
-import ChartDBLogo from '@/assets/logo.png';
-import ChartDBDarkLogo from '@/assets/logo-dark.png';
-import { useDialog } from '@/hooks/use-dialog';
-import { Badge } from '@/components/badge/badge';
+import { useDialog } from '../../../hooks/use-dialog';
+import { Badge } from '../../../components/badge/badge';
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
-} from '@/components/tooltip/tooltip';
-import { useExportImage } from '@/hooks/use-export-image';
-import { databaseTypeToLabelMap } from '@/lib/databases';
-import { DatabaseType } from '@/lib/domain/database-type';
-import { useConfig } from '@/hooks/use-config';
-import { IS_CHARTDB_IO } from '@/lib/env';
-import { useBreakpoint } from '@/hooks/use-breakpoint';
-import { DiagramIcon } from '@/components/diagram-icon/diagram-icon';
+} from '../../../components/tooltip/tooltip';
+import { useExportImage } from '../../../hooks/use-export-image';
+import { databaseTypeToLabelMap } from '../../../lib/databases';
+import { DatabaseType } from '../../../lib/domain/database-type';
+import { useConfig } from '../../../hooks/use-config';
+import { IS_CHARTDB_IO } from '../../../lib/env';
+import { useBreakpoint } from '../../../hooks/use-breakpoint';
+import { DiagramIcon } from '../../../components/diagram-icon/diagram-icon';
 import {
     KeyboardShortcutAction,
     keyboardShortcutsForOS,
-} from '@/context/keyboard-shortcuts-context/keyboard-shortcuts';
-import { useHistory } from '@/hooks/use-history';
+} from '../../../context/keyboard-shortcuts-context/keyboard-shortcuts';
+import { useHistory } from '../../../hooks/use-history';
 import { useTranslation } from 'react-i18next';
-import { useLayout } from '@/hooks/use-layout';
-import { useTheme } from '@/hooks/use-theme';
-import { enMetadata } from '@/i18n/locales/en';
-import { esMetadata } from '@/i18n/locales/es';
-import { useLocalConfig } from '@/hooks/use-local-config';
+import { useLayout } from '../../../hooks/use-layout';
+import { useTheme } from '../../../hooks/use-theme';
+import { enMetadata } from '../../../i18n/locales/en';
+import { esMetadata } from '../../../i18n/locales/es';
+import { useLocalConfig } from '../../../hooks/use-local-config';
 
 export interface TopNavbarProps {}
 
@@ -73,13 +71,13 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
         setShowCardinality,
         showCardinality,
     } = useLocalConfig();
-    const { effectiveTheme } = useTheme();
+    // const { effectiveTheme } = useTheme();
     const { t, i18n } = useTranslation();
     const { redo, undo, hasRedo, hasUndo } = useHistory();
     const { isMd: isDesktop } = useBreakpoint('md');
     const { config, updateConfig } = useConfig();
     const [editMode, setEditMode] = useState(false);
-    const { exportImage, exportJson } = useExportImage();
+    const { exportImage, exportJson, exportJsonApi } = useExportImage();
     const [editedDiagramName, setEditedDiagramName] =
         React.useState(diagramName);
     const inputRef = React.useRef<HTMLInputElement>(null);
@@ -129,6 +127,10 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
     const exportJSON = useCallback(() => {
         exportJson(currentDiagram);
     }, [exportJson, currentDiagram]);
+
+    const exportJSONAPI = useCallback(() => {
+        exportJsonApi(currentDiagram);
+    }, [exportJsonApi, currentDiagram]);
 
     const openChartDBIO = useCallback(() => {
         window.location.href = 'https://chartdb.io';
@@ -201,16 +203,16 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
         [config?.exportActions, updateConfig, showAlert, openExportSQLDialog]
     );
 
-    const renderStars = useCallback(() => {
-        return (
-            <iframe
-                src={`https://ghbtns.com/github-btn.html?user=chartdb&repo=chartdb&type=star&size=${isDesktop ? 'large' : 'small'}&text=false`}
-                width={isDesktop ? '40' : '25'}
-                height={isDesktop ? '30' : '20'}
-                title="GitHub"
-            ></iframe>
-        );
-    }, [isDesktop]);
+    // const renderStars = useCallback(() => {
+    //     return (
+    //         <iframe
+    //             src={`https://ghbtns.com/github-btn.html?user=chartdb&repo=chartdb&type=star&size=${isDesktop ? 'large' : 'small'}&text=false`}
+    //             width={isDesktop ? '40' : '25'}
+    //             height={isDesktop ? '30' : '20'}
+    //             title="GitHub"
+    //         ></iframe>
+    //     );
+    // }, [isDesktop]);
 
     const renderLastSaved = useCallback(() => {
         return (
@@ -307,7 +309,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
     return (
         <nav className="flex h-20 flex-col justify-between border-b px-3 md:h-12 md:flex-row md:items-center md:px-4">
             <div className="flex flex-1 justify-between gap-x-3 md:justify-normal">
-                <div className="flex py-[10px] font-primary md:items-center md:py-0">
+                {/* <div className="flex py-[10px] font-primary md:items-center md:py-0">
                     <a
                         href="https://chartdb.io"
                         className="cursor-pointer"
@@ -323,7 +325,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
                             className="h-4 max-w-fit"
                         />
                     </a>
-                </div>
+                </div> */}
                 <div>
                     <Menubar className="border-none shadow-none">
                         <MenubarMenu>
@@ -708,6 +710,21 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
                         </MenubarMenu>
                     </Menubar>
                 </div>
+                <div className="flex py-[10px] font-primary md:items-center md:py-0">
+                    <div
+                        onClick={exportJSONAPI}
+                        className="flex cursor-pointer py-[10px] font-primary md:items-center md:py-0"
+                        role="button"
+                        tabIndex={0}
+                        onKeyPress={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                exportJSONAPI();
+                            }
+                        }}
+                    >
+                        Publish
+                    </div>
+                </div>
             </div>
             {isDesktop ? (
                 <>
@@ -716,7 +733,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
                     </div>
                     <div className="hidden flex-1 items-center justify-end gap-2 sm:flex">
                         {renderLastSaved()}
-                        {renderStars()}
+                        {/* {renderStars()} */}
                     </div>
                 </>
             ) : (
@@ -725,7 +742,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
                         {renderDiagramName()}
                     </div>
                     <div className="flex items-center">{renderLastSaved()}</div>
-                    <div className="flex items-center">{renderStars()}</div>
+                    {/* <div className="flex items-center">{renderStars()}</div> */}
                 </div>
             )}
         </nav>

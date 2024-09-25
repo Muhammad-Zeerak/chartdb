@@ -1,21 +1,21 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { DBTable } from '@/lib/domain/db-table';
-import { deepCopy, generateId } from '@/lib/utils';
-import { randomColor } from '@/lib/colors';
+import { DBTable } from '../../lib/domain/db-table';
+import { deepCopy, generateId } from '../../lib/utils';
+import { randomColor } from '../../lib/colors';
 import { ChartDBContext, chartDBContext } from './chartdb-context';
-import { DatabaseType } from '@/lib/domain/database-type';
-import { DBField } from '@/lib/domain/db-field';
-import { DBIndex } from '@/lib/domain/db-index';
-import { DBRelationship } from '@/lib/domain/db-relationship';
-import { useStorage } from '@/hooks/use-storage';
-import { useRedoUndoStack } from '@/hooks/use-redo-undo-stack';
-import { Diagram } from '@/lib/domain/diagram';
+import { DatabaseType } from '../../lib/domain/database-type';
+import { DBField } from '../../lib/domain/db-field';
+import { DBIndex } from '../../lib/domain/db-index';
+import { DBRelationship } from '../../lib/domain/db-relationship';
+import { useStorage } from '../../hooks/use-storage';
+import { useRedoUndoStack } from '../../hooks/use-redo-undo-stack';
+import { Diagram } from '../../lib/domain/diagram';
 import { useNavigate } from 'react-router-dom';
-import { useConfig } from '@/hooks/use-config';
-import { DatabaseEdition } from '@/lib/domain/database-edition';
-import { DBSchema, schemaNameToSchemaId } from '@/lib/domain/db-schema';
-import { useLocalConfig } from '@/hooks/use-local-config';
-import { defaultSchemas } from '@/lib/data/default-schemas';
+import { useConfig } from '../../hooks/use-config';
+import { DatabaseEdition } from '../../lib/domain/database-edition';
+import { DBSchema, schemaNameToSchemaId } from '../../lib/domain/db-schema';
+import { useLocalConfig } from '../../hooks/use-local-config';
+import { defaultSchemas } from '../../lib/data/default-schemas';
 
 export const ChartDBProvider: React.FC<React.PropsWithChildren> = ({
     children,

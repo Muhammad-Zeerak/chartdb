@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
-import { Accordion } from '@/components/accordion/accordion';
+import { Accordion } from '../../../../../components/accordion/accordion';
 import { RelationshipListItem } from './relationship-list-item/relationship-list-item';
-import { DBRelationship } from '@/lib/domain/db-relationship';
-import { useLayout } from '@/hooks/use-layout';
+import { DBRelationship } from '../../../../../lib/domain/db-relationship';
+import { useLayout } from '../../../../../hooks/use-layout';
 
 export interface TableListProps {
     relationships: DBRelationship[];

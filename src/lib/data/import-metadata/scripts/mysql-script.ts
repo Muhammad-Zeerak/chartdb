@@ -1,4 +1,4 @@
-import { DatabaseEdition } from '@/lib/domain/database-edition';
+import { DatabaseEdition } from '../../../../lib/domain/database-edition';
 
 export const getMySQLQuery = (
     options: {

@@ -4,27 +4,27 @@ import {
     ResizableHandle,
     ResizablePanel,
     ResizablePanelGroup,
-} from '@/components/resizable/resizable';
+} from '../../components/resizable/resizable';
 import { SidePanel } from './side-panel/side-panel';
 import { Canvas } from './canvas/canvas';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useConfig } from '@/hooks/use-config';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useDialog } from '@/hooks/use-dialog';
-import { useRedoUndoStack } from '@/hooks/use-redo-undo-stack';
-import { Toaster } from '@/components/toast/toaster';
-import { useFullScreenLoader } from '@/hooks/use-full-screen-spinner';
-import { useBreakpoint } from '@/hooks/use-breakpoint';
-import { useLayout } from '@/hooks/use-layout';
+import { useConfig } from '../../hooks/use-config';
+import { useChartDB } from '../../hooks/use-chartdb';
+import { useDialog } from '../../hooks/use-dialog';
+import { useRedoUndoStack } from '../../hooks/use-redo-undo-stack';
+import { Toaster } from '../../components/toast/toaster';
+import { useFullScreenLoader } from '../../hooks/use-full-screen-spinner';
+import { useBreakpoint } from '../../hooks/use-breakpoint';
+import { useLayout } from '../../hooks/use-layout';
 import {
     Drawer,
     DrawerContent,
     DrawerDescription,
     DrawerHeader,
     DrawerTitle,
-} from '@/components/drawer/drawer';
-import { Separator } from '@/components/separator/separator';
-import { Diagram } from '@/lib/domain/diagram';
+} from '../../components/drawer/drawer';
+import { Separator } from '../../components/separator/separator';
+import { Diagram } from '../../lib/domain/diagram';
 
 export const EditorPage: React.FC = () => {
     const { loadDiagram, currentDiagram } = useChartDB();
@@ -93,7 +93,7 @@ export const EditorPage: React.FC = () => {
     return (
         <>
             <section
-                className={`bg-background ${isDesktop ? 'h-screen w-screen' : 'h-dvh w-dvw'} flex select-none flex-col overflow-x-hidden`}
+                className={`bg-background ${isDesktop ? 'h-screen w-95vw' : 'h-dvh w-dvw'} flex select-none flex-col overflow-x-hidden`}
             >
                 <TopNavbar />
                 {isDesktop ? (

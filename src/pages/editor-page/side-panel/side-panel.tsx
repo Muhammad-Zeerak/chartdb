@@ -6,14 +6,17 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from '@/components/select/select';
+} from '../../../components/select/select';
 import { TablesSection } from './tables-section/tables-section';
 import { RelationshipsSection } from './relationships-section/relationships-section';
-import { useLayout } from '@/hooks/use-layout';
-import { SidebarSection } from '@/context/layout-context/layout-context';
+import { useLayout } from '../../../hooks/use-layout';
+import { SidebarSection } from '../../../context/layout-context/layout-context';
 import { useTranslation } from 'react-i18next';
-import { SelectBox, SelectBoxOption } from '@/components/select-box/select-box';
-import { useChartDB } from '@/hooks/use-chartdb';
+import {
+    SelectBox,
+    SelectBoxOption,
+} from '../../../components/select-box/select-box';
+import { useChartDB } from '../../../hooks/use-chartdb';
 
 export interface SidePanelProps {}
 

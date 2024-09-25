@@ -1,13 +1,13 @@
 import React from 'react';
 import { StorageContext, storageContext } from './storage-context';
 import Dexie, { type EntityTable } from 'dexie';
-import { Diagram } from '@/lib/domain/diagram';
-import { DBTable } from '@/lib/domain/db-table';
+import { Diagram } from '../../lib/domain/diagram';
+import { DBTable } from '../../lib/domain/db-table';
 import {
     DBRelationship,
     determineCardinalities,
-} from '@/lib/domain/db-relationship';
-import { ChartDBConfig } from '@/lib/domain/config';
+} from '../../lib/domain/db-relationship';
+import { ChartDBConfig } from '../../lib/domain/config';
 
 export const StorageProvider: React.FC<React.PropsWithChildren> = ({
     children,

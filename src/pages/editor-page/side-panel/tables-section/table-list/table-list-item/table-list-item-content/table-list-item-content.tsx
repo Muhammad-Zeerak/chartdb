@@ -1,21 +1,21 @@
 import React from 'react';
 import { Plus, FileType2, FileKey2, MessageCircleMore } from 'lucide-react';
-import { Button } from '@/components/button/button';
+import { Button } from '../../../../../../../components/button/button';
 import {
     Accordion,
     AccordionItem,
     AccordionTrigger,
     AccordionContent,
-} from '@/components/accordion/accordion';
-import { Separator } from '@/components/separator/separator';
-import { DBTable } from '@/lib/domain/db-table';
-import { DBField } from '@/lib/domain/db-field';
-import { useChartDB } from '@/hooks/use-chartdb';
+} from '../../../../../../../components/accordion/accordion';
+import { Separator } from '../../../../../../../components/separator/separator';
+import { DBTable } from '../../../../../../../lib/domain/db-table';
+import { DBField } from '../../../../../../../lib/domain/db-field';
+import { useChartDB } from '../../../../../../../hooks/use-chartdb';
 import { TableField } from './table-field/table-field';
 import { TableIndex } from './table-index/table-index';
-import { DBIndex } from '@/lib/domain/db-index';
+import { DBIndex } from '../../../../../../../lib/domain/db-index';
 import { useTranslation } from 'react-i18next';
-import { Textarea } from '@/components/textarea/textarea';
+import { Textarea } from '../../../../../../../components/textarea/textarea';
 import {
     DndContext,
     closestCenter,

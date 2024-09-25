@@ -1,4 +1,4 @@
-import { Button } from '@/components/button/button';
+import { Button } from '../../../../../../../components/button/button';
 import {
     Select,
     SelectContent,
@@ -6,19 +6,19 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from '@/components/select/select';
+} from '../../../../../../../components/select/select';
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
-} from '@/components/tooltip/tooltip';
-import { useChartDB } from '@/hooks/use-chartdb';
+} from '../../../../../../../components/tooltip/tooltip';
+import { useChartDB } from '../../../../../../../hooks/use-chartdb';
 import {
     DBRelationship,
     determineCardinalities,
     determineRelationshipType,
     RelationshipType,
-} from '@/lib/domain/db-relationship';
+} from '../../../../../../../lib/domain/db-relationship';
 import { useReactFlow } from '@xyflow/react';
 import {
     FileMinus2,

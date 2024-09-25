@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useMemo } from 'react';
 import { NodeProps, Node, NodeResizer, useStore } from '@xyflow/react';
-import { Button } from '@/components/button/button';
+import { Button } from '../../../../components/button/button';
 import {
     ChevronsLeftRight,
     ChevronsRightLeft,
@@ -9,13 +9,13 @@ import {
     ChevronDown,
     ChevronUp,
 } from 'lucide-react';
-import { Label } from '@/components/label/label';
-import { DBTable } from '@/lib/domain/db-table';
+import { Label } from '../../../../components/label/label';
+import { DBTable } from '../../../../lib/domain/db-table';
 import { TableNodeField } from './table-node-field';
-import { useLayout } from '@/hooks/use-layout';
-import { useChartDB } from '@/hooks/use-chartdb';
+import { useLayout } from '../../../../hooks/use-layout';
+import { useChartDB } from '../../../../hooks/use-chartdb';
 import { TableEdgeType } from '../table-edge';
-import { DBField } from '@/lib/domain/db-field';
+import { DBField } from '../../../../lib/domain/db-field';
 import { useTranslation } from 'react-i18next';
 import { TableNodeContextMenu } from './table-node-context-menu';
 

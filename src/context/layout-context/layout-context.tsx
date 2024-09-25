@@ -1,4 +1,4 @@
-import { emptyFn } from '@/lib/utils';
+import { emptyFn } from '../../lib/utils';
 import { createContext } from 'react';
 
 export type SidebarSection = 'tables' | 'relationships';

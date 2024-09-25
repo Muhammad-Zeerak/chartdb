@@ -1,15 +1,15 @@
 import React, { useCallback, useState } from 'react';
 import { DialogContext, dialogContext } from './dialog-context';
-import { CreateDiagramDialog } from '@/dialogs/create-diagram-dialog/create-diagram-dialog';
-import { OpenDiagramDialog } from '@/dialogs/open-diagram-dialog/open-diagram-dialog';
-import { ExportSQLDialog } from '@/dialogs/export-sql-dialog/export-sql-dialog';
-import { DatabaseType } from '@/lib/domain/database-type';
+import { CreateDiagramDialog } from '../..//dialogs/create-diagram-dialog/create-diagram-dialog';
+import { OpenDiagramDialog } from '../..//dialogs/open-diagram-dialog/open-diagram-dialog';
+import { ExportSQLDialog } from '../..//dialogs/export-sql-dialog/export-sql-dialog';
+import { DatabaseType } from '../../lib/domain/database-type';
 import {
     BaseAlertDialog,
     BaseAlertDialogProps,
-} from '@/dialogs/base-alert-dialog/base-alert-dialog';
-import { CreateRelationshipDialog } from '@/dialogs/create-relationship-dialog/create-relationship-dialog';
-import { ImportDatabaseDialog } from '@/dialogs/import-database-dialog/import-database-dialog';
+} from '../..//dialogs/base-alert-dialog/base-alert-dialog';
+import { CreateRelationshipDialog } from '../..//dialogs/create-relationship-dialog/create-relationship-dialog';
+import { ImportDatabaseDialog } from '../..//dialogs/import-database-dialog/import-database-dialog';
 
 export const DialogProvider: React.FC<React.PropsWithChildren> = ({
     children,

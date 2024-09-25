@@ -6,11 +6,11 @@ import {
     Position,
     useReactFlow,
 } from '@xyflow/react';
-import { DBRelationship } from '@/lib/domain/db-relationship';
+import { DBRelationship } from '../../../lib/domain/db-relationship';
 import { RIGHT_HANDLE_ID_PREFIX } from './table-node/table-node-field';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useLayout } from '@/hooks/use-layout';
-import { cn } from '@/lib/utils';
+import { useChartDB } from '../../../hooks/use-chartdb';
+import { useLayout } from '../../../hooks/use-layout';
+import { cn } from '../../../lib/utils';
 import { getCardinalityMarkerId } from './canvas-utils';
 
 export type TableEdgeType = Edge<

@@ -1,31 +1,31 @@
 import React from 'react';
 import { Ellipsis, GripVertical, Trash2 } from 'lucide-react';
-import { Input } from '@/components/input/input';
-import { Button } from '@/components/button/button';
+import { Input } from '../../../../../../../../components/input/input';
+import { Button } from '../../../../../../../../components/button/button';
 import { KeyRound } from 'lucide-react';
-import { Separator } from '@/components/separator/separator';
+import { Separator } from '../../../../../../../../components/separator/separator';
 
-import { DBField } from '@/lib/domain/db-field';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { dataTypeMap } from '@/lib/data/data-types';
+import { DBField } from '../../../../../../../../lib/domain/db-field';
+import { useChartDB } from '../../../../../../../../hooks/use-chartdb';
+import { dataTypeMap } from '../../../../../../../../lib/data/data-types';
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
-} from '@/components/tooltip/tooltip';
+} from '../../../../../../../../components/tooltip/tooltip';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from '@/components/popover/popover';
-import { Label } from '@/components/label/label';
-import { Checkbox } from '@/components/checkbox/checkbox';
+} from '../../../../../../../../components/popover/popover';
+import { Label } from '../../../../../../../../components/label/label';
+import { Checkbox } from '../../../../../../../../components/checkbox/checkbox';
 import { useTranslation } from 'react-i18next';
-import { Textarea } from '@/components/textarea/textarea';
+import { Textarea } from '../../../../../../../../components/textarea/textarea';
 import { TableFieldToggle } from './table-field-toggle';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { SelectBox } from '@/components/select-box/select-box';
+import { SelectBox } from '../../../../../../../../components/select-box/select-box';
 
 export interface TableFieldProps {
     field: DBField;

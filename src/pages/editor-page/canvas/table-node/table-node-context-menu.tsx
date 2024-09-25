@@ -3,11 +3,11 @@ import {
     ContextMenuContent,
     ContextMenuItem,
     ContextMenuTrigger,
-} from '@/components/context-menu/context-menu';
-import { useBreakpoint } from '@/hooks/use-breakpoint';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useLayout } from '@/hooks/use-layout';
-import { DBTable } from '@/lib/domain/db-table';
+} from '../../../../components/context-menu/context-menu';
+import { useBreakpoint } from '../../../../hooks/use-breakpoint';
+import { useChartDB } from '../../../../hooks/use-chartdb';
+import { useLayout } from '../../../../hooks/use-layout';
+import { DBTable } from '../../../../lib/domain/db-table';
 import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

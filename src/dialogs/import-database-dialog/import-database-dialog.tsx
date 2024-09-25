@@ -1,18 +1,18 @@
-import { Dialog, DialogContent } from '@/components/dialog/dialog';
-import { useDialog } from '@/hooks/use-dialog';
-import { DatabaseType } from '@/lib/domain/database-type';
+import { Dialog, DialogContent } from '../../components/dialog/dialog';
+import { useDialog } from '../../hooks/use-dialog';
+import { DatabaseType } from '../../lib/domain/database-type';
 import { DialogProps } from '@radix-ui/react-dialog';
 
 import React, { useCallback, useEffect, useState } from 'react';
 import { ImportDatabase } from '../common/import-database/import-database';
-import { DatabaseEdition } from '@/lib/domain/database-edition';
+import { DatabaseEdition } from '../../lib/domain/database-edition';
 import {
     DatabaseMetadata,
     loadDatabaseMetadata,
-} from '@/lib/data/import-metadata/metadata-types/database-metadata';
-import { loadFromDatabaseMetadata } from '@/lib/domain/diagram';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useRedoUndoStack } from '@/hooks/use-redo-undo-stack';
+} from '../../lib/data/import-metadata/metadata-types/database-metadata';
+import { loadFromDatabaseMetadata } from '../../lib/domain/diagram';
+import { useChartDB } from '../../hooks/use-chartdb';
+import { useRedoUndoStack } from '../../hooks/use-redo-undo-stack';
 import { Trans, useTranslation } from 'react-i18next';
 import { useReactFlow } from '@xyflow/react';
 

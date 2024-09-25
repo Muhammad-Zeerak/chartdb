@@ -1,18 +1,18 @@
 import React, { useCallback, useState } from 'react';
-import { Card, CardContent } from '@/components/card/card';
+import { Card, CardContent } from '../../../../components/card/card';
 import { ZoomIn, ZoomOut, Save, Redo, Undo, Scan } from 'lucide-react';
-import { Separator } from '@/components/separator/separator';
+import { Separator } from '../../../../components/separator/separator';
 import { ToolbarButton } from './toolbar-button';
-import { useHistory } from '@/hooks/use-history';
-import { useChartDB } from '@/hooks/use-chartdb';
+import { useHistory } from '../../../../hooks/use-history';
+import { useChartDB } from '../../../../hooks/use-chartdb';
 import { useOnViewportChange, useReactFlow } from '@xyflow/react';
 import {
     Tooltip,
     TooltipTrigger,
     TooltipContent,
-} from '@/components/tooltip/tooltip';
+} from '../../../../components/tooltip/tooltip';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/button/button';
+import { Button } from '../../../../components/button/button';
 
 const convertToPercentage = (value: number) => `${Math.round(value * 100)}%`;
 

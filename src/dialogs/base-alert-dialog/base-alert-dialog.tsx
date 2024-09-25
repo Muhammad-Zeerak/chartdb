@@ -8,9 +8,9 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-} from '@/components/alert-dialog/alert-dialog';
+} from '../../components/alert-dialog/alert-dialog';
 import { AlertDialogProps } from '@radix-ui/react-alert-dialog';
-import { useDialog } from '@/hooks/use-dialog';
+import { useDialog } from '../../hooks/use-dialog';
 
 export interface BaseAlertDialogProps {
     title: string;

@@ -5,7 +5,7 @@ import {
     schemaNameToSchemaId,
 } from './db-schema';
 import { DBTable } from './db-table';
-import { generateId } from '@/lib/utils';
+import { generateId } from '../../lib/utils';
 
 export interface DBRelationship {
     id: string;

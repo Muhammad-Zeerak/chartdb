@@ -1,9 +1,9 @@
 import React from 'react';
-import ChartDBLogo from '@/assets/logo.png';
-import ChartDBDarkLogo from '@/assets/logo-dark.png';
+import ChartDBLogo from '../../assets/logo.png';
+import ChartDBDarkLogo from '../../assets/logo-dark.png';
 import { examples } from './examples-data/examples-data';
 import { ExampleCard } from './example-card';
-import { useTheme } from '@/hooks/use-theme';
+import { useTheme } from '../../hooks/use-theme';
 
 export const ExamplesPage: React.FC = () => {
     const { effectiveTheme } = useTheme();

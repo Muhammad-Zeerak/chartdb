@@ -1,5 +1,5 @@
-import { Button } from '@/components/button/button';
-import { DiagramIcon } from '@/components/diagram-icon/diagram-icon';
+import { Button } from '../../components/button/button';
+import { DiagramIcon } from '../../components/diagram-icon/diagram-icon';
 import {
     Dialog,
     DialogClose,
@@ -8,8 +8,8 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from '@/components/dialog/dialog';
-import { ScrollArea } from '@/components/scroll-area/scroll-area';
+} from '../../components/dialog/dialog';
+import { ScrollArea } from '../../components/scroll-area/scroll-area';
 import {
     Table,
     TableBody,
@@ -17,11 +17,11 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from '@/components/table/table';
-import { useConfig } from '@/hooks/use-config';
-import { useDialog } from '@/hooks/use-dialog';
-import { useStorage } from '@/hooks/use-storage';
-import { Diagram } from '@/lib/domain/diagram';
+} from '../../components/table/table';
+import { useConfig } from '../../hooks/use-config';
+import { useDialog } from '../../hooks/use-dialog';
+import { useStorage } from '../../hooks/use-storage';
+import { Diagram } from '../../lib/domain/diagram';
 import { DialogProps } from '@radix-ui/react-dialog';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -5,9 +5,9 @@ import {
     KeyboardShortcutAction,
     keyboardShortcutsForOS,
 } from './keyboard-shortcuts';
-import { useHistory } from '@/hooks/use-history';
-import { useDialog } from '@/hooks/use-dialog';
-import { useChartDB } from '@/hooks/use-chartdb';
+import { useHistory } from '../../hooks/use-history';
+import { useDialog } from '../../hooks/use-dialog';
+import { useChartDB } from '../../hooks/use-chartdb';
 
 export const KeyboardShortcutsProvider: React.FC<React.PropsWithChildren> = ({
     children,

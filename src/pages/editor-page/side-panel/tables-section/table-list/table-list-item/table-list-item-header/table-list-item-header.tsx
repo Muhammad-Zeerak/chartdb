@@ -8,10 +8,10 @@ import {
     FileKey2,
     Check,
 } from 'lucide-react';
-import { ListItemHeaderButton } from '@/pages/editor-page/side-panel/list-item-header-button/list-item-header-button';
-import { DBTable } from '@/lib/domain/db-table';
-import { Input } from '@/components/input/input';
-import { useChartDB } from '@/hooks/use-chartdb';
+import { ListItemHeaderButton } from '../../../../../../../pages/editor-page/side-panel/list-item-header-button/list-item-header-button';
+import { DBTable } from '../../../../../../../lib/domain/db-table';
+import { Input } from '../../../../../../../components/input/input';
+import { useChartDB } from '../../../../../../../hooks/use-chartdb';
 import { useClickAway, useKeyPressEvent } from 'react-use';
 import {
     DropdownMenu,
@@ -21,10 +21,10 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from '@/components/dropdown-menu/dropdown-menu';
+} from '../../../../../../../components/dropdown-menu/dropdown-menu';
 import { useReactFlow } from '@xyflow/react';
-import { useLayout } from '@/hooks/use-layout';
-import { useBreakpoint } from '@/hooks/use-breakpoint';
+import { useLayout } from '../../../../../../../hooks/use-layout';
+import { useBreakpoint } from '../../../../../../../hooks/use-breakpoint';
 import { useTranslation } from 'react-i18next';
 
 export interface TableListItemHeaderProps {

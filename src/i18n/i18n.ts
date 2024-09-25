@@ -18,4 +18,5 @@ i18n.use(initReactI18next).init({
     debug: false,
 });
 
-export { i18n };
+export default i18n;
+

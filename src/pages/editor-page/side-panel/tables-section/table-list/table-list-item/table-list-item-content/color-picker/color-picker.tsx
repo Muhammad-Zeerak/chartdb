@@ -3,8 +3,8 @@ import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from '@/components/popover/popover';
-import { colorOptions } from '@/lib/colors';
+} from '../../../../../../../../components/popover/popover';
+import { colorOptions } from '../../../../../../../../lib/colors';
 
 export interface ColorPickerProps {
     color: string;

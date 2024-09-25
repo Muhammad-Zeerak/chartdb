@@ -1,14 +1,14 @@
 import React from 'react';
-import { Diagram } from '@/lib/domain/diagram';
+import { Diagram } from '../../lib/domain/diagram';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../tooltip/tooltip';
 import {
     databaseEditionToImageMap,
     databaseEditionToLabelMap,
-} from '@/lib/domain/database-edition';
+} from '../../lib/domain/database-edition';
 import {
     databaseSecondaryLogoMap,
     databaseTypeToLabelMap,
-} from '@/lib/databases';
+} from '../../lib/databases';
 
 export interface DiagramIconProps {
     diagram: Diagram;

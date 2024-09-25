@@ -1,5 +1,5 @@
-import { Button } from '@/components/button/button';
-import { CodeSnippet } from '@/components/code-snippet/code-snippet';
+import { Button } from '../../components/button/button';
+import { CodeSnippet } from '../../components/code-snippet/code-snippet';
 import {
     Dialog,
     DialogClose,
@@ -8,17 +8,17 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from '@/components/dialog/dialog';
-import { Label } from '@/components/label/label';
-import { Spinner } from '@/components/spinner/spinner';
-import { useChartDB } from '@/hooks/use-chartdb';
-import { useDialog } from '@/hooks/use-dialog';
+} from '../../components/dialog/dialog';
+import { Label } from '../../components/label/label';
+import { Spinner } from '../../components/spinner/spinner';
+import { useChartDB } from '../../hooks/use-chartdb';
+import { useDialog } from '../../hooks/use-dialog';
 import {
     exportBaseSQL,
     exportSQL,
-} from '@/lib/data/export-metadata/export-sql-script';
-import { databaseTypeToLabelMap } from '@/lib/databases';
-import { DatabaseType } from '@/lib/domain/database-type';
+} from '../../lib/data/export-metadata/export-sql-script';
+import { databaseTypeToLabelMap } from '../../lib/databases';
+import { DatabaseType } from '../../lib/domain/database-type';
 import { DialogProps } from '@radix-ui/react-dialog';
 import { Annoyed, Sparkles } from 'lucide-react';
 import React, { useCallback, useEffect } from 'react';
